@@ -1,0 +1,41 @@
+<div>
+  <article
+    class="panel panel-default"
+    [ngStyle]="{ backgroundColor: color }"
+    (click)="color = 'yellow'"
+    (dblclick)="onMudaStyle()"
+  >
+    <div class="panel-body">
+      <input
+        type="text"
+        class="no-extras"
+        [(ngModel)]="messageVarClasse.content"
+      />
+      <button
+        type="submit"
+        class="btn btn-primary"
+        id="button-salvar"
+      >
+        Salvar
+      </button>
+    </div>
+    <footer class="panel-footer">
+      <div class="autor">
+        <input
+          type="text"
+          class="no-extras"
+          [(ngModel)]="messageVarClasse.userEmail"
+          disabled
+        />
+      </div>
+      <div class="config">
+        <button (click)="ativarEditar()" class="btn btn-outline-primary btn-sm">
+          Editar
+        </button>
+        <button (click)="onDelete()" class="btn btn-dark btn-sm">
+          Deletar
+        </button>
+      </div>
+    </footer>
+  </article>
+</div>
